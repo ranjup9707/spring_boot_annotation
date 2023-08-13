@@ -9,12 +9,14 @@ import com.springboot.annotation.service.Pizza;
 @Component 
 public class PizzaController 
 {
+	@Autowired
+	@Qualifier("nonVegPizza")
 	private Pizza pizza;
 
-	@Autowired 
-	public PizzaController(@Qualifier("vegPizza") Pizza pizza) {
-		this.pizza = pizza;
-	}
+	/*
+	 * @Autowired public PizzaController(@Qualifier("vegPizza") Pizza pizza) {
+	 * this.pizza = pizza; }
+	 */
 	
 	public String getPizza() {
 		return pizza.getPizza();
