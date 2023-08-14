@@ -9,5 +9,4 @@ public class Demo11SpringBootControllerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(Demo11SpringBootControllerApplication.class, args);
 	}
-
 }
