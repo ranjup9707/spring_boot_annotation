@@ -11,8 +11,8 @@ import com.springboot.annotation.beans.Book;
 @RequestMapping("/api") 
 public class BookController 
 {
-	@RequestMapping("/book/{id}")
-	public ResponseEntity<Book> pathVariableDemo(@PathVariable int id){
+	@RequestMapping("/book/{id}/{title}")
+	public ResponseEntity<Book> pathVariableDemo(@PathVariable int id, @PathVariable("title") String bookTitle){
 		Book book = new Book();
 		book.setId(id);
 		return ResponseEntity.ok(book);
